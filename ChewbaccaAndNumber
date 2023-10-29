@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+
+int main() {
+	string str;
+	cin>>str;
+
+	for(int i=0;i<str.length();i++)
+	{
+		int number=str[i]-'0'; 
+		if(i==0 and number == 9)
+		{
+			cout<<number;
+		}
+		else
+		{
+			cout<<min(number,9-number);
+		}
+	}
+	return 0;
+}
